@@ -125,3 +125,4 @@ Set true to flag that allows git to sign all commits and tags
 `git config --global commit.gpgSign true`
 `git config --global tag.gpgSign true`
 
+---
