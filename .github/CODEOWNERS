@@ -1,0 +1,50 @@
+# Este é um comentário.
+# Cada linha é um padrão de arquivo seguido por um ou mais proprietários.
+
+# Esses proprietários serão os proprietários padrão para tudo no
+# repositório. A menos que uma correspondência posterior tenha precedência,
+# @global-owner1 e @global-owner2 serão solicitados para
+# revisão quando alguém abrir uma pull request.
+*       @global-owner1 @global-owner2 @titilomt
+
+# A ordem é importante; o último padrão de correspondência tem
+# prioridade. Quando alguém abre uma pull request que
+# modifica apenas arquivos JS, somente @js-owner, e não o(s)
+# proprietário(s) global(is), será solicitado para uma revisão.
+*.js    @js-owner
+
+# Você também pode usar endereços de e-mail se preferir. Eles serão
+# usados para procurar usuários assim como fazemos com e-mails do
+# autor do commit.
+*.go docs@example.com
+
+# Teams can be specified as code owners as well. Teams should
+# be identified in the format @org/team-name. Teams must have
+# explicit write access to the repository. In this example,
+# the octocats team in the octo-org organization owns all .txt files.
+*.txt @octo-org/octocats
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+/build/logs/ @doctocat
+
+# O padrão `docs/*` corresponderá a arquivos como
+# `docs/getting-started.md`, mas a nenhum outro arquivo aninhado como
+# `docs/build-app/troubleshooting.md`.
+docs/*  docs@example.com
+
+# Neste exemplo, @octocat tem qualquer arquivo no diretório apps
+# em qualquer lugar do seu repositório.
+apps/ @octocat
+
+# In this example, @doctocat owns any file in the `/docs`
+# directory in the root of your repository and any of its
+# subdirectories.
+/docs/ @doctocat
+
+# In this example, @octocat owns any file in the `/apps` 
+# directory in the root of your repository except for the `/apps/github` 
+# subdirectory, as its owners are left empty.
+/apps/ @octocat
+/apps/github 
